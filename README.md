@@ -1,11 +1,11 @@
 ## Portafolio personal, mi página web ⚡
 
-## Programado con 🛠:
+### Programado con 🛠:
 * CSS3
 * HTML5
 * JS vanilla
 
-## Dependencias 🚧:
+### Dependencias 🚧:
 * Swiper 6.5.8
 * SweetAlert 2.0  
 
