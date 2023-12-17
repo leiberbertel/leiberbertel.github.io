@@ -213,6 +213,6 @@ async function handleSubmit(event) {
   })
   if (response.ok) {
     this.reset();
-    alert("Gracias por tu interes en contactarme, te escribiré pronto");
+    Swal.fire('¡Te escribiré pronto!', 'Gracias por tu interes en contactarme.', 'success');
   }
 }
