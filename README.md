@@ -6,6 +6,7 @@
 * JS vanilla
 
 ## Dependencias 🚧:
-* Swiper v.6.5.8
+* Swiper 6.5.8
+* SweetAlert 2.0  
 
 
