@@ -148,8 +148,8 @@
 
     <div class="skills__container container grid">
       <div>
-        <div class="skills__content skills__close">
-          <div class="skills__header">
+        <div class="skills__content" [class.skills__open]="skillsOpen.has('frontend')" [class.skills__close]="!skillsOpen.has('frontend')">
+          <div class="skills__header" (click)="toggleSkill('frontend')">
             <i class="uil uil-brackets-curly skills__icon"></i>
 
             <div>
@@ -221,8 +221,8 @@
           </div>
         </div>
 
-        <div class="skills__content skills__open">
-          <div class="skills__header">
+        <div class="skills__content" [class.skills__open]="skillsOpen.has('backend')" [class.skills__close]="!skillsOpen.has('backend')">
+          <div class="skills__header" (click)="toggleSkill('backend')">
             <i class="uil uil-server-network skills__icon"></i>
 
             <div>
@@ -317,8 +317,8 @@
       </div>
 
       <div>
-        <div class="skills__content skills__close">
-          <div class="skills__header">
+        <div class="skills__content" [class.skills__open]="skillsOpen.has('data')" [class.skills__close]="!skillsOpen.has('data')">
+          <div class="skills__header" (click)="toggleSkill('data')">
             <i class="uil uil-chart-line skills__icon"></i>
 
             <div>
@@ -380,19 +380,22 @@
 
     <div class="qualification__container container">
       <div class="qualification__tabs">
-        <div class="qualification__button button--flex qualification__active" data-target="#education">
+        <div class="qualification__button button--flex" [class.qualification__active]="activeTab === 'education'"
+          (click)="setTab('education')">
           <i class="uil uil-graduation-cap qualification__icom"></i>
           Educación
         </div>
 
-        <div class="qualification__button button--flex" data-target="#work">
+        <div class="qualification__button button--flex" [class.qualification__active]="activeTab === 'work'"
+          (click)="setTab('work')">
           <i class="uil uil-briefcase-alt qualification__icom"></i>
           Trabajo
         </div>
       </div>
 
       <div class="qualification__sections">
-        <div class="qualification__content qualification__active" data-content id="education">
+        <div class="qualification__content" [class.qualification__active]="activeTab === 'education'" data-content
+          id="education">
           <div class="qualification__data">
             <div>
               <h3 class="qualification__title">Bachiller en ciencias</h3>
@@ -467,7 +470,8 @@
           </div>
         </div>
 
-        <div class="qualification__content" data-content id="work">
+        <div class="qualification__content" [class.qualification__active]="activeTab === 'work'" data-content
+          id="work">
 
           <div class="qualification__data">
             <div>
@@ -552,15 +556,15 @@
           <h3 class="services__title">Frontend <br />developer</h3>
         </div>
 
-        <span class="button button--flex button--small button--link services__button">
+        <span class="button button--flex button--small button--link services__button" (click)="openModal(0)">
           Ver más
           <i class="uil uil-arrow-right button__icon"></i>
         </span>
 
-        <div class="services__modal">
+        <div class="services__modal" [class.active-modal]="activeModal === 0">
           <div class="services__modal-content">
             <h4 class="services__modal-title">Frontend <br />developer</h4>
-            <i class="uil uil-times services__modal-close"></i>
+            <i class="uil uil-times services__modal-close" (click)="closeModal()"></i>
 
             <ul class="services_modal-services grid">
               <li class="services__modal-service">
@@ -606,15 +610,15 @@
           <h3 class="services__title">Backend <br />developer</h3>
         </div>
 
-        <span class="button button--flex button--small button--link services__button">
+        <span class="button button--flex button--small button--link services__button" (click)="openModal(1)">
           Ver más
           <i class="uil uil-arrow-right button__icon"></i>
         </span>
 
-        <div class="services__modal">
+        <div class="services__modal" [class.active-modal]="activeModal === 1">
           <div class="services__modal-content">
             <h4 class="services__modal-title">Backend <br />developer</h4>
-            <i class="uil uil-times services__modal-close"></i>
+            <i class="uil uil-times services__modal-close" (click)="closeModal()"></i>
 
             <ul class="services_modal-services grid">
               <li class="services__modal-service">
@@ -661,15 +665,15 @@
           <h3 class="services__title">Data <br />analyst</h3>
         </div>
 
-        <span class="button button--flex button--small button--link services__button">
+        <span class="button button--flex button--small button--link services__button" (click)="openModal(2)">
           Ver más
           <i class="uil uil-arrow-right button__icon"></i>
         </span>
 
-        <div class="services__modal">
+        <div class="services__modal" [class.active-modal]="activeModal === 2">
           <div class="services__modal-content">
             <h4 class="services__modal-title">Data <br />analyst</h4>
-            <i class="uil uil-times services__modal-close"></i>
+            <i class="uil uil-times services__modal-close" (click)="closeModal()"></i>
 
             <ul class="services_modal-services grid">
               <li class="services__modal-service">
