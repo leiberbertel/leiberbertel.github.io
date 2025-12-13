@@ -1,4 +1,4 @@
-import { Component, HostListener, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
+import { Component, HostListener, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormsModule,
@@ -20,7 +20,7 @@ register();
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   private fb = inject(FormBuilder);
 
   menuOpen = false;
@@ -68,6 +68,10 @@ export class AppComponent {
     message: ['', Validators.required],
   });
 
+  ngOnInit() {
+    this.applyTheme();
+  }
+
   toggleMenu(open: boolean) {
     this.menuOpen = open;
   }
@@ -89,9 +93,13 @@ export class AppComponent {
     this.activeModal = null;
   }
 
+  private applyTheme() {
+    document.body.classList.toggle('dark-theme', this.dark);
+  }
+
   toggleTheme() {
     this.dark = !this.dark;
-    document.body.classList.toggle('dark-theme', this.dark);
+    this.applyTheme();
     localStorage.setItem('selected-theme', this.dark ? 'dark' : 'light');
     localStorage.setItem('selected-icon', this.dark ? 'uil-moon' : 'uil-sun');
   }
@@ -123,12 +131,10 @@ export class AppComponent {
     const res = await fetch('https://formspree.io/f/mzbqzaad', {
       method: 'POST',
       headers: { Accept: 'application/json' },
-      body: new FormData(
-        // Object.entries(this.contactForm.value).reduce((f, [k, v]) => {
-        //   f.append(k, v ?? '');
-        //   return f;
-        // }, new FormData())
-      ),
+      body: Object.entries(this.contactForm.value).reduce((f, [k, v]) => {
+        f.append(k, v ?? '');
+        return f;
+      }, new FormData()),
     });
     if (res.ok) {
       this.contactForm.reset();

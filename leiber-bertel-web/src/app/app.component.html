@@ -1,4 +1,4 @@
-<header class="header" id="header">
+<header class="header" id="header" [class.scroll-header]="showHeaderShadow">
   <nav class="nav container">
     <a href="#" class="nav__logo">Leiber Bertel</a>
 
@@ -39,7 +39,7 @@
     </div>
 
     <div class="nav__btns">
-      <i class="uil uil-moon change-theme" id="theme-button"></i>
+      <i class="uil change-theme" id="theme-button" [ngClass]="dark ? 'uil-moon' : 'uil-sun'" (click)="toggleTheme()"></i>
       <div class="nav__toggle" id="nav-toggle">
         <i class="uil uil-apps"></i>
       </div>
@@ -395,7 +395,7 @@
 
       <div class="qualification__sections">
         <div class="qualification__content" [class.qualification__active]="activeTab === 'education'" data-content
-          id="education">
+          id="education" [style.display]="activeTab === 'education' ? 'block' : 'none'">
           <div class="qualification__data">
             <div>
               <h3 class="qualification__title">Bachiller en ciencias</h3>
@@ -470,8 +470,8 @@
           </div>
         </div>
 
-        <div class="qualification__content" [class.qualification__active]="activeTab === 'work'" data-content
-          id="work">
+        <div class="qualification__content" [class.qualification__active]="activeTab === 'work'" data-content id="work"
+          [style.display]="activeTab === 'work' ? 'block' : 'none'">
 
           <div class="qualification__data">
             <div>
@@ -760,26 +760,26 @@
         </div>
       </div>
 
-      <form id="form" action="https://formspree.io/f/mzbqzaad" method="POST" class="contact__form grid">
+      <form id="form" class="contact__form grid" [formGroup]="contactForm" (ngSubmit)="submit()">
         <div class="contact__inputs grid">
           <div class="contact__content">
             <label for="" class="contact__label">Nombre</label>
-            <input name="name" type="text" class="contact__input" />
+            <input name="name" type="text" class="contact__input" formControlName="name" />
           </div>
 
           <div class="contact__content">
             <label for="" class="contact__label">Correo</label>
-            <input name="email" type="email" class="contact__input" />
+            <input name="email" type="email" class="contact__input" formControlName="email" />
           </div>
         </div>
 
         <div class="contact__content">
           <label for="" class="contact__label">Proyecto</label>
-          <input name="reason" type="text" class="contact__input" />
+          <input name="reason" type="text" class="contact__input" formControlName="reason" />
         </div>
         <div class="contact__content">
           <label for="" class="contact__label">Mensaje</label>
-          <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
+          <textarea name="message" id="" cols="0" rows="7" class="contact__input" formControlName="message"></textarea>
         </div>
 
         <div>
@@ -832,7 +832,7 @@
   </div>
 </footer>
 
-<a href="#" class="scrollup" id="scroll-up">
+<a href="#" class="scrollup" id="scroll-up" [class.show-scroll]="showScrollUp">
   <i class="uil uil-arrow-up scrollup__icon"></i>
 </a>
 <router-outlet />
