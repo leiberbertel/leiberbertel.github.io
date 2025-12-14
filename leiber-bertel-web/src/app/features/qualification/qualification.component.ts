@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 export interface QualificationItem {
   title: string;
@@ -12,24 +13,24 @@ export interface QualificationItem {
 @Component({
   selector: 'app-qualification',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   template: `
     <section class="qualification section" id="qualification">
-      <h2 class="section__title">Cualificación</h2>
-      <span class="section__subtitle">Mi trayectoria personal</span>
+      <h2 class="section__title">{{ 'QUALIFICATION.TITLE' | translate }}</h2>
+      <span class="section__subtitle">{{ 'QUALIFICATION.SUBTITLE' | translate }}</span>
 
       <div class="qualification__container container">
         <div class="qualification__tabs">
           <div class="qualification__button button--flex" [class.qualification__active]="activeTab === 'education'"
             (click)="setTab('education')">
             <i class="uil uil-graduation-cap qualification__icom"></i>
-            Educación
+            {{ 'QUALIFICATION.TABS.EDUCATION' | translate }}
           </div>
 
           <div class="qualification__button button--flex" [class.qualification__active]="activeTab === 'work'"
             (click)="setTab('work')">
             <i class="uil uil-briefcase-alt qualification__icom"></i>
-            Trabajo
+            {{ 'QUALIFICATION.TABS.WORK' | translate }}
           </div>
         </div>
 
@@ -41,11 +42,11 @@ export interface QualificationItem {
                 <div class="qualification__info qualification__info--left"
                   [class.qualification__info--empty]="item.align === 'right'">
                   <ng-container *ngIf="item.align !== 'right'">
-                    <h3 class="qualification__title">{{ item.title }}</h3>
-                    <span class="qualification__subtitle">{{ item.subtitle }}</span>
+                    <h3 class="qualification__title">{{ item.title | translate }}</h3>
+                    <span class="qualification__subtitle">{{ item.subtitle | translate }}</span>
                     <div class="qualification__calendar">
                       <i class="uil uil-calendar-alt"></i>
-                      {{ item.calendar }}
+                      {{ item.calendar | translate }}
                     </div>
                   </ng-container>
                 </div>
@@ -58,11 +59,11 @@ export interface QualificationItem {
                 <div class="qualification__info qualification__info--right"
                   [class.qualification__info--empty]="item.align !== 'right'">
                   <ng-container *ngIf="item.align === 'right'">
-                    <h3 class="qualification__title">{{ item.title }}</h3>
-                    <span class="qualification__subtitle">{{ item.subtitle }}</span>
+                    <h3 class="qualification__title">{{ item.title | translate }}</h3>
+                    <span class="qualification__subtitle">{{ item.subtitle | translate }}</span>
                     <div class="qualification__calendar">
                       <i class="uil uil-calendar-alt"></i>
-                      {{ item.calendar }}
+                      {{ item.calendar | translate }}
                     </div>
                   </ng-container>
                 </div>
@@ -77,11 +78,11 @@ export interface QualificationItem {
                 <div class="qualification__info qualification__info--left"
                   [class.qualification__info--empty]="item.align === 'right'">
                   <ng-container *ngIf="item.align !== 'right'">
-                    <h3 class="qualification__title">{{ item.title }}</h3>
-                    <span class="qualification__subtitle">{{ item.subtitle }}</span>
+                    <h3 class="qualification__title">{{ item.title | translate }}</h3>
+                    <span class="qualification__subtitle">{{ item.subtitle | translate }}</span>
                     <div class="qualification__calendar">
                       <i class="uil uil-calendar-alt"></i>
-                      {{ item.calendar }}
+                      {{ item.calendar | translate }}
                     </div>
                   </ng-container>
                 </div>
@@ -94,11 +95,11 @@ export interface QualificationItem {
                 <div class="qualification__info qualification__info--right"
                   [class.qualification__info--empty]="item.align !== 'right'">
                   <ng-container *ngIf="item.align === 'right'">
-                    <h3 class="qualification__title">{{ item.title }}</h3>
-                    <span class="qualification__subtitle">{{ item.subtitle }}</span>
+                    <h3 class="qualification__title">{{ item.title | translate }}</h3>
+                    <span class="qualification__subtitle">{{ item.subtitle | translate }}</span>
                     <div class="qualification__calendar">
                       <i class="uil uil-calendar-alt"></i>
-                      {{ item.calendar }}
+                      {{ item.calendar | translate }}
                     </div>
                   </ng-container>
                 </div>

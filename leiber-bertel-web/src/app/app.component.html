@@ -3,23 +3,29 @@
   [showHeaderShadow]="showHeaderShadow"
   [activeSection]="activeSection"
   [links]="navLinks"
+  [language]="language"
+  [languages]="languages"
+  (languageChange)="setLanguage($event)"
   (toggleTheme)="toggleTheme()"
 ></app-nav>
 
 <main class="main">
   <app-hero [data]="heroData"></app-hero>
   <app-about [data]="aboutData"></app-about>
-  <app-skills [categories]="skillsCategories" defaultOpenId="backend"></app-skills>
+  <app-skills
+    [categories]="skillsCategories"
+    defaultOpenId="backend"
+  ></app-skills>
   <app-qualification [education]="education" [work]="work"></app-qualification>
   <app-services [services]="services"></app-services>
-  <app-testimonials [testimonials]="testimonials"></app-testimonials>
+  <!-- <app-testimonials [testimonials]="testimonials"></app-testimonials> -->
   <app-portfolio [projects]="projects"></app-portfolio>
   <app-contact></app-contact>
 </main>
 
 <app-footer
   title="Leiber Bertel"
-  subtitle="Software Developer"
+  [subtitle]="'HERO.TITLE' | translate"
   [links]="footerLinks"
   [socials]="footerSocials"
 ></app-footer>

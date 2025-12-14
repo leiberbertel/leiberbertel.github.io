@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 export interface FooterLink {
   label: string;
@@ -14,7 +15,7 @@ export interface FooterSocial {
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   template: `
     <footer class="footer">
       <div class="footer__bg">
@@ -26,7 +27,7 @@ export interface FooterSocial {
 
           <ul class="footer__links">
             <li *ngFor="let link of links">
-              <a [href]="link.href" class="footer__link">{{ link.label }}</a>
+              <a [href]="link.href" class="footer__link">{{ link.label | translate }}</a>
             </li>
           </ul>
 
@@ -38,7 +39,7 @@ export interface FooterSocial {
         </div>
 
         <p class="footer__copy">
-          &#169; {{ title }}. Hecho con ♡
+          &#169; {{ title }}. {{ 'FOOTER.COPY' | translate }}
         </p>
       </div>
     </footer>

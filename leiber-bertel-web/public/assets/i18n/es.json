@@ -1,0 +1,198 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "ABOUT": "Sobre mí",
+    "SKILLS": "Habilidades",
+    "SERVICES": "Servicios",
+    "PORTFOLIO": "Portafolio",
+    "CONTACT": "Contacto"
+  },
+  "HERO": {
+    "NAME": "¡Hola! Soy Leiber",
+    "TITLE": "Desarrollador de Software",
+    "SUBTITLE": "Desarrollador de Software",
+    "DESCRIPTION": "Soy un desarrollador backend con conocimientos de frontend. Soy autodidacta, me gusta aprender cosas nuevas cada día y crear productos web.",
+    "CTA": "Contáctame",
+    "SCROLL": "Desplazarse hacia abajo",
+    "IMAGE_ALT": "Foto de perfil de Leiber"
+  },
+  "ABOUT": {
+    "TITLE": "Conóceme un poco...",
+    "SUBTITLE": "Lema de vida",
+    "TAGLINE": "Nunca parar de aprender",
+    "DESCRIPTION": "Desarrollador de software con experiencia en la creación de aplicaciones robustas y escalables. Aunque mi enfoque principal es el desarrollo backend, también tengo conocimientos en tecnologías frontend, lo que me permite contribuir eficazmente a través de la pila.",
+    "STATS": {
+      "EXPERIENCE": "Años <br />de experiencia",
+      "PROJECTS": "Proyectos <br />completados",
+      "COMPANIES": "Compañías <br />en las que he trabajado"
+    },
+    "CV": "Descargar CV"
+  },
+  "SKILLS": {
+    "TITLE": "Habilidades",
+    "SUBTITLE": "Mi nivel técnico",
+    "CATEGORIES": {
+      "FRONTEND": {
+        "TITLE": "Desarrollador Frontend",
+        "SUBTITLE": "Más de 2 años"
+      },
+      "BACKEND": {
+        "TITLE": "Desarrollador Backend",
+        "SUBTITLE": "Más de 2 años"
+      },
+      "DATA": {
+        "TITLE": "Analista de datos",
+        "SUBTITLE": "Más de 11 meses"
+      },
+      "MOBILE": {
+        "TITLE": "Desarrollador Móvil",
+        "SUBTITLE": "Más de 5 meses"
+      }
+    }
+  },
+  "SERVICES": {
+    "TITLE": "Mis servicios",
+    "SUBTITLE": "Mis diferentes facetas",
+    "VIEW_MORE": "Ver más",
+    "FRONTEND": {
+      "TITLE": "Desarrollador <br />frontend",
+      "BULLETS": {
+        "0": "Supervisar la estructura y el diseño de páginas web y hacerlas lo más sencillas posible.",
+        "1": "Desarrollar aplicaciones orientadas al usuario y supervisar su eficacia.",
+        "2": "Comprender las necesidades de la empresa y garantizar la máxima eficacia de las páginas web.",
+        "3": "Cambiar el diseño y el contenido de las páginas existentes en beneficio de usuarios y clientes."
+      }
+    },
+    "BACKEND": {
+      "TITLE": "Desarrollador <br />backend",
+      "BULLETS": {
+        "0": "Trabajar con la dirección para garantizar que la experiencia de usuario siga siendo de alto nivel.",
+        "1": "Incorporar elementos de seguridad preparados para el futuro y supervisar su funcionalidad permanente.",
+        "2": "Optimizar aplicaciones para ofrecer mayor rapidez y comodidad.",
+        "3": "Implementar aplicaciones de almacenamiento de datos y mantener su eficacia."
+      }
+    },
+    "DATA": {
+      "TITLE": "Analista <br />de datos",
+      "BULLETS": {
+        "0": "Extraer y procesar todo tipo de datos.",
+        "1": "Analizar todos los datos con las herramientas adecuadas.",
+        "2": "Elaborar informes con los datos relevantes.",
+        "3": "Transmitir a la dirección los resultados obtenidos."
+      }
+    }
+  },
+  "TESTIMONIALS": {
+    "TITLE": "Testimonios",
+    "SUBTITLE": "Lo que dicen de mi trabajo",
+    "MESSAGES": {
+      "0": {
+        "ROLE": "Product Manager",
+        "TEXT": "Su enfoque en backend nos permitió escalar sin fricciones y con entregas rápidas."
+      },
+      "1": {
+        "ROLE": "Tech Lead",
+        "TEXT": "Gran equilibrio entre calidad de código y velocidad; siempre propone mejoras útiles."
+      },
+      "2": {
+        "ROLE": "Data Analyst",
+        "TEXT": "Su apoyo en visualizaciones y dashboards nos ayudó a comunicar hallazgos clave."
+      }
+    }
+  },
+  "QUALIFICATION": {
+    "TITLE": "Cualificación",
+    "SUBTITLE": "Mi trayectoria personal",
+    "TABS": {
+      "EDUCATION": "Educación",
+      "WORK": "Trabajo"
+    },
+    "EDUCATION": {
+      "BACHELOR": {
+        "TITLE": "Bachiller en ciencias",
+        "SUBTITLE": "Colombia - Colegio Álvaro Araujo Noguera",
+        "CALENDAR": "2018 - 2020"
+      },
+      "BACKEND": {
+        "TITLE": "Backend Developer con Python y Django",
+        "SUBTITLE": "Colombia - Platzi",
+        "CALENDAR": "2021 - 2023"
+      },
+      "FULLSTACK": {
+        "TITLE": "Desarrollo Full-Stack con Java + Spring",
+        "SUBTITLE": "Colombia - Oracle Next Education",
+        "CALENDAR": "2022 - 2023"
+      },
+      "SOFTWARE": {
+        "TITLE": "Técnico en Programación de Software",
+        "SUBTITLE": "Colombia - SENA",
+        "CALENDAR": "2023 - 2024"
+      }
+    },
+    "WORK": {
+      "SOFTWARE": {
+        "TITLE": "Desarrollador de Software (Mobile y Web)",
+        "SUBTITLE": "Quipux - Medellín, Antioquia",
+        "CALENDAR": "2023 - Actualidad"
+      },
+      "FULLSTACK": {
+        "TITLE": "Developer full-stack",
+        "SUBTITLE": "Autónomo - Medellín, Antioquia",
+        "CALENDAR": "2022 - 2023"
+      },
+      "LOGISTICS": {
+        "TITLE": "Operario Logística",
+        "SUBTITLE": "Utah Textil - Colombia, Antioquia",
+        "CALENDAR": "2021 - 2022"
+      },
+      "ADMIN": {
+        "TITLE": "Operario Administrativo",
+        "SUBTITLE": "Sistervarly - Colombia, César",
+        "CALENDAR": "2019 - 2021"
+      }
+    }
+  },
+  "PORTFOLIO": {
+    "TITLE": "Proyectos",
+    "SUBTITLE": "A lo largo de mi trayectoria como desarrollador de software, he tenido la oportunidad de trabajar en proyectos increíbles y desafiantes. <br />Estos son algunos proyectos que me gustaría compartir",
+    "CTA": "Github",
+    "PROJECTS": {
+      "0": {
+        "DESCRIPTION": "Aplicación de lista de tareas con registro de usuario, inicio de sesión, búsqueda y CRUD completo construido con Django.",
+        "ALT": "Aplicación de tareas en Django"
+      },
+      "1": {
+        "DESCRIPTION": "Dashboard financiero configurable con Plotly Dash en Python para cargar, filtrar y visualizar datos.",
+        "ALT": "Dashboard financiero interactivo"
+      },
+      "2": {
+        "DESCRIPTION": "Blog responsivo con creación de publicaciones, soporte de imágenes y pruebas automatizadas. Construido con Django y Bootstrap.",
+        "ALT": "Blog en Django responsivo"
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "¡Hablemos!",
+    "SUBTITLE": "Mi bandeja de entrada siempre está abierta. <br />Si tienes alguna pregunta sobre mis servicios, o simplemente quieres saludarme<br />no dudes en contactarme.",
+    "LOCATION": {
+      "TITLE": "Ubicación",
+      "SUBTITLE": "Colombia - Medellín"
+    },
+    "FORM": {
+      "NAME": "Nombre",
+      "EMAIL": "Correo",
+      "REASON": "Proyecto",
+      "MESSAGE": "Mensaje",
+      "SUBMIT": "Enviar mensaje"
+    },
+    "ALERTS": {
+      "WARNING_TITLE": "Advertencia",
+      "WARNING_TEXT": "Por favor completa todos los campos.",
+      "SUCCESS_TITLE": "¡Te escribiré pronto!",
+      "SUCCESS_TEXT": "Gracias por tu interés en contactarme."
+    }
+  },
+  "FOOTER": {
+    "COPY": "Hecho con amor."
+  }
+}

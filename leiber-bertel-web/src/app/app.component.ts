@@ -1,17 +1,43 @@
-import { Component, HostListener, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  HostListener,
+  OnInit,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { register } from 'swiper/element/bundle';
-import { HeroComponent, HeroData } from './features/hero/hero.component';
+import { I18nService } from './core/services/i18n.service';
 import { AboutComponent, AboutData } from './features/about/about.component';
-import { ServicesComponent, ServiceCard } from './features/services/services.component';
-import { TestimonialsComponent, Testimonial } from './features/testimonials/testimonials.component';
-import { NavComponent, NavLink } from './features/nav/nav.component';
-import { SkillsComponent, SkillCategory } from './features/skills/skills.component';
-import { QualificationComponent, QualificationItem } from './features/qualification/qualification.component';
-import { PortfolioComponent, PortfolioProject } from './features/portfolio/portfolio.component';
 import { ContactComponent } from './features/contact/contact.component';
-import { FooterComponent, FooterLink, FooterSocial } from './features/footer/footer.component';
+import {
+  FooterComponent,
+  FooterLink,
+  FooterSocial,
+} from './features/footer/footer.component';
+import { HeroComponent, HeroData } from './features/hero/hero.component';
+import { NavComponent, NavLink } from './features/nav/nav.component';
+import {
+  PortfolioComponent,
+  PortfolioProject,
+} from './features/portfolio/portfolio.component';
+import {
+  QualificationComponent,
+  QualificationItem,
+} from './features/qualification/qualification.component';
+import {
+  ServicesComponent,
+  ServiceCard,
+} from './features/services/services.component';
+import {
+  SkillsComponent,
+  SkillCategory,
+} from './features/skills/skills.component';
+import {
+  TestimonialsComponent,
+  Testimonial,
+} from './features/testimonials/testimonials.component';
 
 register();
 
@@ -24,6 +50,7 @@ register();
     NavComponent,
     HeroComponent,
     AboutComponent,
+    TranslateModule,
     SkillsComponent,
     QualificationComponent,
     ServicesComponent,
@@ -41,67 +68,90 @@ export class AppComponent implements OnInit {
   activeSection = 'home';
   showHeaderShadow = false;
   showScrollUp = false;
+  language = '';
+
+  languages = [
+    { code: 'es', label: 'Español' },
+    { code: 'en', label: 'English' },
+    { code: 'pt', label: 'Português' },
+  ];
 
   navLinks: NavLink[] = [
-    { id: 'home', href: '#home', label: 'Inicio', icon: 'uil uil-estate' },
-    { id: 'about', href: '#about', label: 'Sobre mi', icon: 'uil uil-user' },
-    { id: 'skills', href: '#skills', label: 'Habilidades', icon: 'uil uil-file-alt' },
-    { id: 'services', href: '#services', label: 'Servicios', icon: 'uil uil-suitcase' },
-    { id: 'portfolio', href: '#portfolio', label: 'Portafolio', icon: 'uil uil-scenery' },
-    { id: 'contact', href: '#contact', label: 'Contacto', icon: 'uil uil-message' },
+    { id: 'home', href: '#home', label: 'NAV.HOME', icon: 'uil uil-estate' },
+    { id: 'about', href: '#about', label: 'NAV.ABOUT', icon: 'uil uil-user' },
+    {
+      id: 'skills',
+      href: '#skills',
+      label: 'NAV.SKILLS',
+      icon: 'uil uil-file-alt',
+    },
+    {
+      id: 'services',
+      href: '#services',
+      label: 'NAV.SERVICES',
+      icon: 'uil uil-suitcase',
+    },
+    {
+      id: 'portfolio',
+      href: '#portfolio',
+      label: 'NAV.PORTFOLIO',
+      icon: 'uil uil-scenery',
+    },
+    {
+      id: 'contact',
+      href: '#contact',
+      label: 'NAV.CONTACT',
+      icon: 'uil uil-message',
+    },
   ];
 
   heroData: HeroData = {
-    name: '¡Hola! Soy Leiber',
-    title: 'Software Developer',
-    subtitle: 'Software Developer',
-    description:
-      'Soy un Desarrollador backend con conocimientos de frontend, autodidacta, me gusta aprender cosas nuevas cada día y crear productos web.',
-    ctaLabel: 'Contáctame',
+    name: 'HERO.NAME',
+    title: 'HERO.TITLE',
+    subtitle: 'HERO.SUBTITLE',
+    description: 'HERO.DESCRIPTION',
+    ctaLabel: 'HERO.CTA',
     ctaHref: '#contact',
-    scrollLabel: 'Desplazarse hacia abajo',
+    scrollLabel: 'HERO.SCROLL',
     scrollHref: '#about',
     imageSrc: 'assets/img/perfil.png',
-    imageAlt: 'Foto de perfil de Leiber',
+    imageAlt: 'HERO.IMAGE_ALT',
     social: [
-      { icon: 'uil uil-linkedin-alt', href: 'https://www.linkedin.com/in/leiber-bertel/', label: 'LinkedIn' },
-      { icon: 'uil uil-university', href: 'https://platzi.com/p/leiberbertel/', label: 'Platzi' },
-      { icon: 'uil uil-github-alt', href: 'https://github.com/leiberbertel', label: 'GitHub' },
+      {
+        icon: 'uil uil-linkedin-alt',
+        href: 'https://www.linkedin.com/in/leiber-bertel/',
+        label: 'LinkedIn',
+      },
+      {
+        icon: 'uil uil-university',
+        href: 'https://platzi.com/p/leiberbertel/',
+        label: 'Platzi',
+      },
+      {
+        icon: 'uil uil-github-alt',
+        href: 'https://github.com/leiberbertel',
+        label: 'GitHub',
+      },
     ],
   };
 
   aboutData: AboutData = {
     image: 'assets/img/about.jpeg',
-    description:
-      'Desarrollador de software con experiencia en la creación de aplicaciones robustas y escalables. Aunque mi enfoque principal es el desarrollo backend, también tengo conocimientos en tecnologías frontend, lo que me permite contribuir eficazmente a través de la pila.',
+    description: 'ABOUT.DESCRIPTION',
     stats: [
-      { value: '02+', label: 'Años <br />experiencia' },
-      { value: '25+', label: 'Proyectos<br />completados' },
-      { value: '01+', label: 'Compañias <br />trabajado' },
+      { value: '02+', label: 'ABOUT.STATS.EXPERIENCE' },
+      { value: '25+', label: 'ABOUT.STATS.PROJECTS' },
+      { value: '01+', label: 'ABOUT.STATS.COMPANIES' },
     ],
     cvLink: 'assets/pdf/leiber_bertel_curriculum.pdf',
-    cvLabel: 'Descargar CV',
+    cvLabel: 'ABOUT.CV',
   };
 
   skillsCategories: SkillCategory[] = [
     {
-      id: 'frontend',
-      title: 'Frontend Developer',
-      subtitle: 'Más de 2 año',
-      icon: 'uil uil-brackets-curly',
-      skills: [
-        { name: 'HTML', level: '90%', barClass: 'skills__html' },
-        { name: 'CSS', level: '75%', barClass: 'skills__css' },
-        { name: 'JavaScript', level: '80%', barClass: 'skills__python' },
-        { name: 'Vue', level: '70%', barClass: 'skills__vue' },
-        { name: 'Angular', level: '70%', barClass: 'skills__vue' },
-        { name: 'Git & Github', level: '70%', barClass: 'skills__git' },
-      ],
-    },
-    {
       id: 'backend',
-      title: 'Backend Developer',
-      subtitle: 'Más de 2 año',
+      title: 'SKILLS.CATEGORIES.BACKEND.TITLE',
+      subtitle: 'SKILLS.CATEGORIES.BACKEND.SUBTITLE',
       icon: 'uil uil-server-network',
       skills: [
         { name: 'Python', level: '80%', barClass: 'skills__python' },
@@ -115,9 +165,23 @@ export class AppComponent implements OnInit {
       ],
     },
     {
+      id: 'frontend',
+      title: 'SKILLS.CATEGORIES.FRONTEND.TITLE',
+      subtitle: 'SKILLS.CATEGORIES.FRONTEND.SUBTITLE',
+      icon: 'uil uil-brackets-curly',
+      skills: [
+        { name: 'HTML', level: '90%', barClass: 'skills__html' },
+        { name: 'CSS', level: '75%', barClass: 'skills__css' },
+        { name: 'JavaScript', level: '80%', barClass: 'skills__python' },
+        { name: 'Vue', level: '70%', barClass: 'skills__vue' },
+        { name: 'Angular', level: '70%', barClass: 'skills__vue' },
+        { name: 'Git & Github', level: '70%', barClass: 'skills__git' },
+      ],
+    },
+    {
       id: 'data',
-      title: 'Data analyst',
-      subtitle: 'Más de 9 meses',
+      title: 'SKILLS.CATEGORIES.DATA.TITLE',
+      subtitle: 'SKILLS.CATEGORIES.DATA.SUBTITLE',
       icon: 'uil uil-chart-line',
       skills: [
         { name: 'Excel', level: '70%', barClass: 'skills__excel' },
@@ -126,29 +190,40 @@ export class AppComponent implements OnInit {
         { name: 'Big Data', level: '60%', barClass: 'skills__bigdata' },
       ],
     },
+    {
+      id: 'mobile',
+      title: 'SKILLS.CATEGORIES.MOBILE.TITLE',
+      subtitle: 'SKILLS.CATEGORIES.MOBILE.SUBTITLE',
+      icon: 'uil uil-mobile-android',
+      skills: [
+        { name: 'Flutter', level: '66%', barClass: 'skills__flutter' },
+        { name: 'Kotlin', level: '65%', barClass: 'skills__kotlin' },
+        { name: 'Jetpack Compose', level: '65%', barClass: 'skills__jetpackcompose' },
+      ],
+    },
   ];
 
   education: QualificationItem[] = [
     {
-      title: 'Bachiller en ciencias',
-      subtitle: 'Colombia - Colegio Alvaro Araujo Noguera',
-      calendar: '2018 - 2020',
+      title: 'QUALIFICATION.EDUCATION.BACHELOR.TITLE',
+      subtitle: 'QUALIFICATION.EDUCATION.BACHELOR.SUBTITLE',
+      calendar: 'QUALIFICATION.EDUCATION.BACHELOR.CALENDAR',
     },
     {
-      title: 'Backend Developer con Python y Django',
-      subtitle: 'Colombia - Platzi',
-      calendar: '2021 - 2023',
+      title: 'QUALIFICATION.EDUCATION.BACKEND.TITLE',
+      subtitle: 'QUALIFICATION.EDUCATION.BACKEND.SUBTITLE',
+      calendar: 'QUALIFICATION.EDUCATION.BACKEND.CALENDAR',
       align: 'right',
     },
     {
-      title: 'Desarrollo Full-Stack con Java + Spring',
-      subtitle: 'Colombia - Oracle Next Education',
-      calendar: '2022 - 2023',
+      title: 'QUALIFICATION.EDUCATION.FULLSTACK.TITLE',
+      subtitle: 'QUALIFICATION.EDUCATION.FULLSTACK.SUBTITLE',
+      calendar: 'QUALIFICATION.EDUCATION.FULLSTACK.CALENDAR',
     },
     {
-      title: 'Técnico en Programación de Software',
-      subtitle: 'Colombia - SENA',
-      calendar: '2023 - 2024',
+      title: 'QUALIFICATION.EDUCATION.SOFTWARE.TITLE',
+      subtitle: 'QUALIFICATION.EDUCATION.SOFTWARE.SUBTITLE',
+      calendar: 'QUALIFICATION.EDUCATION.SOFTWARE.CALENDAR',
       align: 'right',
       last: true,
     },
@@ -156,25 +231,25 @@ export class AppComponent implements OnInit {
 
   work: QualificationItem[] = [
     {
-      title: 'Desarrollador de Software (Mobile y Web)',
-      subtitle: 'Quipux - Medellín, Antioquía',
-      calendar: '2023 - Actualidad',
+      title: 'QUALIFICATION.WORK.SOFTWARE.TITLE',
+      subtitle: 'QUALIFICATION.WORK.SOFTWARE.SUBTITLE',
+      calendar: 'QUALIFICATION.WORK.SOFTWARE.CALENDAR',
     },
     {
-      title: 'Developer full-stack',
-      subtitle: 'Autonomo - Medellín, Antioquía',
-      calendar: '2022 - 2023',
+      title: 'QUALIFICATION.WORK.FULLSTACK.TITLE',
+      subtitle: 'QUALIFICATION.WORK.FULLSTACK.SUBTITLE',
+      calendar: 'QUALIFICATION.WORK.FULLSTACK.CALENDAR',
       align: 'right',
     },
     {
-      title: 'Operario Logística',
-      subtitle: 'Utah Textil - Colombia, Antioquía',
-      calendar: '2021 - 2022',
+      title: 'QUALIFICATION.WORK.LOGISTICS.TITLE',
+      subtitle: 'QUALIFICATION.WORK.LOGISTICS.SUBTITLE',
+      calendar: 'QUALIFICATION.WORK.LOGISTICS.CALENDAR',
     },
     {
-      title: 'Operario Administrativo',
-      subtitle: 'Sistervarly - Colombia, César',
-      calendar: '2019 - 2021',
+      title: 'QUALIFICATION.WORK.ADMIN.TITLE',
+      subtitle: 'QUALIFICATION.WORK.ADMIN.SUBTITLE',
+      calendar: 'QUALIFICATION.WORK.ADMIN.CALENDAR',
       align: 'right',
       last: true,
     },
@@ -183,32 +258,32 @@ export class AppComponent implements OnInit {
   services: ServiceCard[] = [
     {
       icon: 'uil uil-arrow',
-      title: 'Frontend <br />developer',
+      title: 'SERVICES.FRONTEND.TITLE',
       bullets: [
-        'Supervisar la estructura y el diseño de páginas web y hacerlas lo más sencillas posible.',
-        'Desarrollar aplicaciones orientadas al usuario y supervisar su eficacia.',
-        'Comprender las necesidades de la empresa y garantizar la máxima eficacia de las páginas web.',
-        'Cambiar el diseño y el contenido de las páginas existentes en beneficio de usuarios y clientes.',
+        'SERVICES.FRONTEND.BULLETS.0',
+        'SERVICES.FRONTEND.BULLETS.1',
+        'SERVICES.FRONTEND.BULLETS.2',
+        'SERVICES.FRONTEND.BULLETS.3',
       ],
     },
     {
       icon: 'uil uil-server-network-alt',
-      title: 'Backend <br />developer',
+      title: 'SERVICES.BACKEND.TITLE',
       bullets: [
-        'Trabajar con la dirección para garantizar que la experiencia de usuario siga siendo de alto nivel.',
-        'Incorporar elementos de seguridad preparados para el futuro y supervisar su funcionalidad permanente.',
-        'Optimizar aplicaciones para ofrecer mayor rapidez y comodidad.',
-        'Implementar aplicaciones de almacenamiento de datos y mantener su eficacia.',
+        'SERVICES.BACKEND.BULLETS.0',
+        'SERVICES.BACKEND.BULLETS.1',
+        'SERVICES.BACKEND.BULLETS.2',
+        'SERVICES.BACKEND.BULLETS.3',
       ],
     },
     {
       icon: 'uil uil-chart-growth',
-      title: 'Data <br />analyst',
+      title: 'SERVICES.DATA.TITLE',
       bullets: [
-        'Extraer y procesar todo tipo de datos.',
-        'Analizar todos los datos con las herramientas adecuadas.',
-        'Elaborar informes con los datos relevantes.',
-        'Transmitir a la dirección los resultados obtenidos.',
+        'SERVICES.DATA.BULLETS.0',
+        'SERVICES.DATA.BULLETS.1',
+        'SERVICES.DATA.BULLETS.2',
+        'SERVICES.DATA.BULLETS.3',
       ],
     },
   ];
@@ -216,61 +291,65 @@ export class AppComponent implements OnInit {
   testimonials: Testimonial[] = [
     {
       name: 'María González',
-      role: 'Product Manager',
-      message: 'Su enfoque en backend nos permitió escalar sin fricciones y con entregas rápidas.',
+      role: 'TESTIMONIALS.MESSAGES.0.ROLE',
+      message: 'TESTIMONIALS.MESSAGES.0.TEXT',
     },
     {
       name: 'Carlos Díaz',
-      role: 'Tech Lead',
-      message: 'Gran equilibrio entre calidad de código y velocidad; siempre propone mejoras útiles.',
+      role: 'TESTIMONIALS.MESSAGES.1.ROLE',
+      message: 'TESTIMONIALS.MESSAGES.1.TEXT',
     },
     {
       name: 'Ana Ruiz',
-      role: 'Data Analyst',
-      message: 'Su apoyo en visualizaciones y dashboards nos ayudó a comunicar hallazgos clave.',
+      role: 'TESTIMONIALS.MESSAGES.2.ROLE',
+      message: 'TESTIMONIALS.MESSAGES.2.TEXT',
     },
   ];
 
   projects: PortfolioProject[] = [
     {
       title: 'To Do List',
-      description:
-        'Aplicación de lista de tareas con registro de usuario, inicio de sesión, búsqueda y CRUD completo construido con Django.',
+      description: 'PORTFOLIO.PROJECTS.0.DESCRIPTION',
       image: 'assets/img/portfolio1.png',
-      alt: 'Aplicación de tareas en Django',
+      alt: 'PORTFOLIO.PROJECTS.0.ALT',
       link: 'https://github.com/leiberbertel/to_do_App',
-      cta: 'Github',
+      cta: 'PORTFOLIO.CTA',
     },
     {
       title: 'Tablero Financiero Interactivo',
-      description:
-        'Dashboard financiero configurable con Plotly Dash en Python para cargar, filtrar y visualizar datos.',
+      description: 'PORTFOLIO.PROJECTS.1.DESCRIPTION',
       image: 'assets/img/portfolio2.png',
-      alt: 'Dashboard financiero interactivo',
+      alt: 'PORTFOLIO.PROJECTS.1.ALT',
       link: 'https://github.com/leiberbertel/financial_dashboard_dash',
-      cta: 'Github',
+      cta: 'PORTFOLIO.CTA',
     },
     {
       title: 'The Django Blogger',
-      description:
-        'Blog responsivo con creación de publicaciones, soporte de imágenes y pruebas automatizadas. Construido con Django y Bootstrap.',
+      description: 'PORTFOLIO.PROJECTS.2.DESCRIPTION',
       image: 'assets/img/portfolio3.png',
-      alt: 'Blog en Django responsivo',
+      alt: 'PORTFOLIO.PROJECTS.2.ALT',
       link: 'https://github.com/leiberbertel/dj-blogger',
-      cta: 'Github',
+      cta: 'PORTFOLIO.CTA',
     },
   ];
 
   footerLinks: FooterLink[] = [
-    { label: 'Servicios', href: '#services' },
-    { label: 'Portafolio', href: '#portfolio' },
-    { label: 'Contacto', href: '#contact' },
+    { label: 'NAV.SERVICES', href: '#services' },
+    { label: 'NAV.PORTFOLIO', href: '#portfolio' },
+    { label: 'NAV.CONTACT', href: '#contact' },
   ];
 
   footerSocials: FooterSocial[] = [
     { href: 'https://twitter.com/BertelLeiber', icon: 'uil uil-twitter-alt' },
-    { href: 'https://www.linkedin.com/in/leiber-bertel/', icon: 'uil uil-linkedin-alt' },
+    {
+      href: 'https://www.linkedin.com/in/leiber-bertel/',
+      icon: 'uil uil-linkedin-alt',
+    },
   ];
+
+  constructor(private i18n: I18nService) {
+    this.language = this.i18n.currentLang || 'es';
+  }
 
   ngOnInit() {
     this.applyTheme();
@@ -300,5 +379,10 @@ export class AppComponent implements OnInit {
         this.activeSection = sec.id;
       }
     });
+  }
+
+  setLanguage(lang: string) {
+    this.i18n.use(lang);
+    this.language = this.i18n.currentLang || 'es';
   }
 }

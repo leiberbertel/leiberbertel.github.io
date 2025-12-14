@@ -1,0 +1,198 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "SKILLS": "Skills",
+    "SERVICES": "Services",
+    "PORTFOLIO": "Portfolio",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "NAME": "Hi! I'm Leiber",
+    "TITLE": "Software Developer",
+    "SUBTITLE": "Software Developer",
+    "DESCRIPTION": "I'm a backend developer with frontend knowledge. I'm self-taught, love learning new things every day, and building web products.",
+    "CTA": "Contact me",
+    "SCROLL": "Scroll down",
+    "IMAGE_ALT": "Profile photo of Leiber"
+  },
+  "ABOUT": {
+    "TITLE": "Get to know me...",
+    "SUBTITLE": "Life motto",
+    "TAGLINE": "Never stop learning",
+    "DESCRIPTION": "Software developer with experience creating robust and scalable applications. While my focus is backend development, I also know frontend technologies, which lets me contribute effectively across the stack.",
+    "STATS": {
+      "EXPERIENCE": "Years <br />of experience",
+      "PROJECTS": "Projects <br />completed",
+      "COMPANIES": "Companies <br />I have worked with"
+    },
+    "CV": "Download resume"
+  },
+  "SKILLS": {
+    "TITLE": "Skills",
+    "SUBTITLE": "My technical level",
+    "CATEGORIES": {
+      "FRONTEND": {
+        "TITLE": "Frontend Developer",
+        "SUBTITLE": "More than 2 years"
+      },
+      "BACKEND": {
+        "TITLE": "Backend Developer",
+        "SUBTITLE": "More than 2 years"
+      },
+      "DATA": {
+        "TITLE": "Data analyst",
+        "SUBTITLE": "More than 11 months"
+      },
+      "MOBILE": {
+        "TITLE": "Mobile Developer ",
+        "SUBTITLE": "More than 5 months"
+      }
+    }
+  },
+  "SERVICES": {
+    "TITLE": "My services",
+    "SUBTITLE": "My different facets",
+    "VIEW_MORE": "See more",
+    "FRONTEND": {
+      "TITLE": "Frontend <br />developer",
+      "BULLETS": {
+        "0": "Oversee web page structure and design, making them as simple as possible.",
+        "1": "Develop user-facing applications and monitor their effectiveness.",
+        "2": "Understand business needs and ensure maximum efficiency of web pages.",
+        "3": "Adjust the design and content of existing pages to benefit users and clients."
+      }
+    },
+    "BACKEND": {
+      "TITLE": "Backend <br />developer",
+      "BULLETS": {
+        "0": "Work with leadership to keep the user experience at a high level.",
+        "1": "Add future-proof security elements and oversee their ongoing functionality.",
+        "2": "Optimize applications for greater speed and usability.",
+        "3": "Implement data storage applications and maintain their effectiveness."
+      }
+    },
+    "DATA": {
+      "TITLE": "Data <br />analyst",
+      "BULLETS": {
+        "0": "Extract and process all kinds of data.",
+        "1": "Analyze data with the right tools.",
+        "2": "Create reports with the relevant insights.",
+        "3": "Share results with leadership in a clear way."
+      }
+    }
+  },
+  "TESTIMONIALS": {
+    "TITLE": "Testimonials",
+    "SUBTITLE": "What people say about my work",
+    "MESSAGES": {
+      "0": {
+        "ROLE": "Product Manager",
+        "TEXT": "His backend focus let us scale without friction and deliver quickly."
+      },
+      "1": {
+        "ROLE": "Tech Lead",
+        "TEXT": "Great balance between code quality and speed; he always suggests useful improvements."
+      },
+      "2": {
+        "ROLE": "Data Analyst",
+        "TEXT": "His support on visualizations and dashboards helped us communicate key findings."
+      }
+    }
+  },
+  "QUALIFICATION": {
+    "TITLE": "Background",
+    "SUBTITLE": "My personal journey",
+    "TABS": {
+      "EDUCATION": "Education",
+      "WORK": "Work"
+    },
+    "EDUCATION": {
+      "BACHELOR": {
+        "TITLE": "High school diploma",
+        "SUBTITLE": "Colombia - Colegio Álvaro Araujo Noguera",
+        "CALENDAR": "2018 - 2020"
+      },
+      "BACKEND": {
+        "TITLE": "Backend Developer with Python and Django",
+        "SUBTITLE": "Colombia - Platzi",
+        "CALENDAR": "2021 - 2023"
+      },
+      "FULLSTACK": {
+        "TITLE": "Full-Stack Development with Java + Spring",
+        "SUBTITLE": "Colombia - Oracle Next Education",
+        "CALENDAR": "2022 - 2023"
+      },
+      "SOFTWARE": {
+        "TITLE": "Software Programming Technician",
+        "SUBTITLE": "Colombia - SENA",
+        "CALENDAR": "2023 - 2024"
+      }
+    },
+    "WORK": {
+      "SOFTWARE": {
+        "TITLE": "Software Developer (Mobile and Web)",
+        "SUBTITLE": "Quipux - Medellín, Antioquia",
+        "CALENDAR": "2023 - Present"
+      },
+      "FULLSTACK": {
+        "TITLE": "Full-stack Developer",
+        "SUBTITLE": "Freelance - Medellín, Antioquia",
+        "CALENDAR": "2022 - 2023"
+      },
+      "LOGISTICS": {
+        "TITLE": "Logistics Operator",
+        "SUBTITLE": "Utah Textil - Colombia, Antioquia",
+        "CALENDAR": "2021 - 2022"
+      },
+      "ADMIN": {
+        "TITLE": "Administrative Operator",
+        "SUBTITLE": "Sistervarly - Colombia, Cesar",
+        "CALENDAR": "2019 - 2021"
+      }
+    }
+  },
+  "PORTFOLIO": {
+    "TITLE": "Projects",
+    "SUBTITLE": "Throughout my journey as a software developer, I've had the chance to work on incredible and challenging projects. <br />Here are a few I would like to share",
+    "CTA": "Github",
+    "PROJECTS": {
+      "0": {
+        "DESCRIPTION": "To-do list app with user signup, login, search, and full CRUD built with Django.",
+        "ALT": "Django to-do application"
+      },
+      "1": {
+        "DESCRIPTION": "Configurable financial dashboard with Plotly Dash in Python to load, filter, and visualize data.",
+        "ALT": "Interactive financial dashboard"
+      },
+      "2": {
+        "DESCRIPTION": "Responsive blog with post creation, image support, and automated tests. Built with Django and Bootstrap.",
+        "ALT": "Responsive blog in Django"
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Let's talk!",
+    "SUBTITLE": "My inbox is always open. <br />If you have any questions about my services or just want to say hi,<br />feel free to reach out.",
+    "LOCATION": {
+      "TITLE": "Location",
+      "SUBTITLE": "Colombia - Medellín"
+    },
+    "FORM": {
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "REASON": "Project",
+      "MESSAGE": "Message",
+      "SUBMIT": "Send message"
+    },
+    "ALERTS": {
+      "WARNING_TITLE": "Warning",
+      "WARNING_TEXT": "Please complete all fields.",
+      "SUCCESS_TITLE": "I'll write back soon!",
+      "SUCCESS_TEXT": "Thanks for your interest in contacting me."
+    }
+  },
+  "FOOTER": {
+    "COPY": "Made with love."
+  }
+}
