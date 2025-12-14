@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 export interface SkillItem {
   name: string;
@@ -18,11 +19,11 @@ export interface SkillCategory {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   template: `
     <section class="skills section" id="skills">
-      <h2 class="section__title">Habilidades</h2>
-      <span class="section__subtitle">Mi nivel técnico</span>
+      <h2 class="section__title">{{ 'SKILLS.TITLE' | translate }}</h2>
+      <span class="section__subtitle">{{ 'SKILLS.SUBTITLE' | translate }}</span>
 
       <div class="skills__container container grid">
         <div *ngFor="let category of categories; let i = index">
@@ -35,8 +36,8 @@ export interface SkillCategory {
               <i class="{{ category.icon }} skills__icon"></i>
 
               <div>
-                <h1 class="skills__title">{{ category.title }}</h1>
-                <span class="skills__subtitle">{{ category.subtitle }}</span>
+                <h1 class="skills__title">{{ category.title | translate }}</h1>
+                <span class="skills__subtitle">{{ category.subtitle | translate }}</span>
               </div>
 
               <i class="uil uil-angle-down skills__arrow"></i>

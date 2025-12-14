@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 export interface PortfolioProject {
   title: string;
@@ -13,28 +14,27 @@ export interface PortfolioProject {
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <section class="portfolio section" id="portfolio">
-      <h2 class="section__title">Proyectos</h2>
-      <span class="section__subtitle">A lo largo de mi trayectoria como Desarrollador de Software, he tenido la
-        oportunidad de
-        trabajar en proyectos increíbles y desafiantes. <br />
-        Estos son algunos proyectos que me gustaría compartir</span>
+      <h2 class="section__title">{{ 'PORTFOLIO.TITLE' | translate }}</h2>
+      <span class="section__subtitle">
+        {{ 'PORTFOLIO.SUBTITLE' | translate }}
+      </span>
       <swiper-container class="portfolio__container container" css-mode="true" navigation="true" pagination="true"
         loop="true">
         <swiper-slide *ngFor="let project of projects">
           <div class="portfolio__content grid">
-            <img [src]="project.image" [alt]="project.alt" class="portfolio__img" />
+            <img [src]="project.image" [alt]="project.alt | translate" class="portfolio__img" />
 
             <div class="portfolio__data">
               <h3 class="portfolio__title">{{ project.title }}</h3>
               <p class="portfolio__description">
-                {{ project.description }}
+                {{ project.description | translate }}
               </p>
               <a [href]="project.link" target="_blank" class="button button--flex button--small portfolio__button">
-                {{ project.cta }}
+                {{ project.cta | translate }}
                 <i class="uil uil-arrow-right button__icon"></i>
               </a>
             </div>
