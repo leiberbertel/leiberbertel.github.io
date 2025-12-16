@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  Output,
+} from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 export interface NavLink {
@@ -18,39 +24,43 @@ export interface NavLink {
       <nav class="nav container">
         <a href="#" class="nav__logo">Leiber Bertel</a>
 
-        <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu" id="nav-menu" [class.show-menu]="navMenuOpen">
           <ul class="nav__list grid">
             <li class="nav__item" *ngFor="let link of links">
-              <a [href]="link.href" class="nav__link" [class.active-link]="activeSection === link.id">
-                <i class="{{ link.icon }} nav__icon"></i>{{ link.label | translate }}
+              <a
+                [href]="link.href"
+                class="nav__link"
+                [class.active-link]="activeSection === link.id"
+                (click)="handleLinkClick()"
+              >
+                <i class="{{ link.icon }} nav__icon"></i
+                >{{ link.label | translate }}
               </a>
             </li>
           </ul>
-          <i class="uil uil-times nav__close" id="nav-close"></i>
+          <i
+            class="uil uil-times nav__close"
+            id="nav-close"
+            (click)="closeMenu()"
+          ></i>
         </div>
 
         <div class="nav__btns">
-          <div class="nav__lang" style="position: relative;" (click)="$event.stopPropagation()">
-            <button type="button" class="nav__lang-trigger lang-btn" aria-label="Change language" (click)="toggleLangMenu()">
+          <div
+            class="nav__lang"
+            style="position: relative;"
+            (click)="$event.stopPropagation()"
+            *ngIf="!navMenuOpen"
+          >
+            <button
+              type="button"
+              class="nav__lang-trigger lang-btn"
+              aria-label="Change language"
+              (click)="toggleLangMenu()"
+            >
               <i class="uil uil-globe"></i>
             </button>
-            <ul
-              *ngIf="langMenuOpen"
-              class="nav__lang-menu animate"
-              style="
-                position: absolute;
-                right: 0;
-                margin-top: 0.5rem;
-                background: var(--container-color, #fff);
-                color: inherit;
-                border-radius: 0.25rem;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                list-style: none;
-                padding: 0.25rem 0;
-                z-index: 1000;
-                min-width: 140px;
-              "
-            >
+            <ul *ngIf="langMenuOpen" class="nav__lang-menu animate">
               <li *ngFor="let lang of languages">
                 <button
                   type="button"
@@ -70,15 +80,25 @@ export interface NavLink {
               </li>
             </ul>
           </div>
-          <i class="uil change-theme" id="theme-button" [ngClass]="dark ? 'uil-moon' : 'uil-sun'" (click)="toggleTheme.emit()"></i>
-          <div class="nav__toggle" id="nav-toggle">
+          <i
+            class="uil change-theme"
+            id="theme-button"
+            [ngClass]="dark ? 'uil-moon' : 'uil-sun'"
+            (click)="toggleTheme.emit()"
+          ></i>
+          <div
+            class="nav__toggle"
+            id="nav-toggle"
+            (click)="toggleMenu($event)"
+            *ngIf="!navMenuOpen"
+          >
             <i class="uil uil-apps"></i>
           </div>
         </div>
       </nav>
     </header>
   `,
-  styleUrl: './nav.component.css'
+  styleUrl: './nav.component.css',
 })
 export class NavComponent {
   @Input() dark = false;
@@ -91,6 +111,7 @@ export class NavComponent {
   @Output() languageChange = new EventEmitter<string>();
 
   langMenuOpen = false;
+  navMenuOpen = false;
 
   @HostListener('document:click')
   closeLangMenu() {
@@ -104,5 +125,20 @@ export class NavComponent {
   selectLanguage(code: string) {
     this.languageChange.emit(code);
     this.langMenuOpen = false;
+  }
+
+  toggleMenu(event?: MouseEvent) {
+    this.navMenuOpen = !this.navMenuOpen;
+    this.langMenuOpen = false;
+    event?.stopPropagation();
+  }
+
+  closeMenu() {
+    this.navMenuOpen = false;
+    this.langMenuOpen = false;
+  }
+
+  handleLinkClick() {
+    this.closeMenu();
   }
 }
