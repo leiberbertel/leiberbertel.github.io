@@ -19,21 +19,36 @@ export interface PortfolioProject {
   template: `
     <section class="portfolio section" id="portfolio">
       <h2 class="section__title">{{ 'PORTFOLIO.TITLE' | translate }}</h2>
-      <span class="section__subtitle">
-        {{ 'PORTFOLIO.SUBTITLE' | translate }}
+      <span
+        class="section__subtitle"
+        [innerHTML]="'PORTFOLIO.SUBTITLE' | translate"
+      >
       </span>
-      <swiper-container class="portfolio__container container" css-mode="true" navigation="true" pagination="true"
-        loop="true">
+      <swiper-container
+        class="portfolio__container container"
+        css-mode="true"
+        navigation="true"
+        pagination="true"
+        loop="true"
+      >
         <swiper-slide *ngFor="let project of projects">
           <div class="portfolio__content grid">
-            <img [src]="project.image" [alt]="project.alt | translate" class="portfolio__img" />
+            <img
+              [src]="project.image"
+              [alt]="project.alt | translate"
+              class="portfolio__img"
+            />
 
             <div class="portfolio__data">
               <h3 class="portfolio__title">{{ project.title }}</h3>
               <p class="portfolio__description">
                 {{ project.description | translate }}
               </p>
-              <a [href]="project.link" target="_blank" class="button button--flex button--small portfolio__button">
+              <a
+                [href]="project.link"
+                target="_blank"
+                class="button button--flex button--small portfolio__button"
+              >
                 {{ project.cta | translate }}
                 <i class="uil uil-arrow-right button__icon"></i>
               </a>
