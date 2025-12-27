@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { register } from 'swiper/element/bundle';
 import { I18nService } from './core/services/i18n.service';
 import { AboutComponent, AboutData } from './features/about/about.component';
 import { ContactComponent } from './features/contact/contact.component';
@@ -38,8 +37,6 @@ import {
   TestimonialsComponent,
   Testimonial,
 } from './features/testimonials/testimonials.component';
-
-register();
 
 @Component({
   selector: 'app-root',

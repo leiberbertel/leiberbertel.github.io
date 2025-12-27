@@ -156,6 +156,12 @@
     "TITLE": "Projects",
     "SUBTITLE": "Throughout my journey as a software developer, I've had the chance to work on incredible and challenging projects. <br />Here are a few I would like to share",
     "CTA": "Github",
+    "EMPTY": "No projects to show right now.",
+    "NAV": {
+      "PREV": "Show previous project",
+      "NEXT": "Show next project",
+      "GOTO": "Go to project {{index}}"
+    },
     "PROJECTS": {
       "0": {
         "DESCRIPTION": "To-do list app with user signup, login, search, and full CRUD built with Django.",
