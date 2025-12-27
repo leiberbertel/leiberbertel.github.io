@@ -11,7 +11,10 @@ import Swal from 'sweetalert2';
   template: `
     <section class="contact section" id="contact">
       <h2 class="section__title">{{ 'CONTACT.TITLE' | translate }}</h2>
-      <span class="section__subtitle" [innerHTML]="'CONTACT.SUBTITLE' | translate">
+      <span
+        class="section__subtitle"
+        [innerHTML]="'CONTACT.SUBTITLE' | translate"
+      >
       </span>
 
       <div class="contact__container container grid">
@@ -20,32 +23,70 @@ import Swal from 'sweetalert2';
             <i class="uil uil-map-marker contact__icon"></i>
 
             <div>
-              <h3 class="contact__title">{{ 'CONTACT.LOCATION.TITLE' | translate }}</h3>
-              <span class="contact__subtitle">{{ 'CONTACT.LOCATION.SUBTITLE' | translate }}</span>
+              <h3 class="contact__title">
+                {{ 'CONTACT.LOCATION.TITLE' | translate }}
+              </h3>
+              <span class="contact__subtitle">{{
+                'CONTACT.LOCATION.SUBTITLE' | translate
+              }}</span>
             </div>
           </div>
         </div>
 
-        <form id="form" class="contact__form grid" [formGroup]="contactForm" (ngSubmit)="submit()">
+        <form
+          id="form"
+          class="contact__form grid"
+          [formGroup]="contactForm"
+          (ngSubmit)="submit()"
+        >
           <div class="contact__inputs grid">
             <div class="contact__content">
-              <label class="contact__label">{{ 'CONTACT.FORM.NAME' | translate }}</label>
-              <input name="name" type="text" class="contact__input" formControlName="name" />
+              <label class="contact__label">{{
+                'CONTACT.FORM.NAME' | translate
+              }}</label>
+              <input
+                name="name"
+                type="text"
+                class="contact__input"
+                formControlName="name"
+              />
             </div>
 
             <div class="contact__content">
-              <label class="contact__label">{{ 'CONTACT.FORM.EMAIL' | translate }}</label>
-              <input name="email" type="email" class="contact__input" formControlName="email" />
+              <label class="contact__label">{{
+                'CONTACT.FORM.EMAIL' | translate
+              }}</label>
+              <input
+                name="email"
+                type="email"
+                class="contact__input"
+                formControlName="email"
+              />
             </div>
           </div>
 
           <div class="contact__content">
-            <label class="contact__label">{{ 'CONTACT.FORM.REASON' | translate }}</label>
-            <input name="reason" type="text" class="contact__input" formControlName="reason" />
+            <label class="contact__label">{{
+              'CONTACT.FORM.REASON' | translate
+            }}</label>
+            <input
+              name="reason"
+              type="text"
+              class="contact__input"
+              formControlName="reason"
+            />
           </div>
           <div class="contact__content">
-            <label class="contact__label">{{ 'CONTACT.FORM.MESSAGE' | translate }}</label>
-            <textarea name="message" cols="0" rows="7" class="contact__input" formControlName="message"></textarea>
+            <label class="contact__label">{{
+              'CONTACT.FORM.MESSAGE' | translate
+            }}</label>
+            <textarea
+              name="message"
+              cols="0"
+              rows="7"
+              class="contact__input"
+              formControlName="message"
+            ></textarea>
           </div>
 
           <div>
@@ -69,17 +110,28 @@ export class ContactComponent implements OnInit {
     message: ['', Validators.required],
   });
 
+  private swalTheme = {
+    customClass: {
+      popup: 'swal-theme',
+      title: 'swal-title',
+      htmlContainer: 'swal-text',
+      confirmButton: 'button button--flex swal-btn',
+    },
+    buttonsStyling: false,
+  };
+
   constructor(private translate: TranslateService) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   async submit() {
     if (this.contactForm.invalid) {
-      Swal.fire(
-        this.translate.instant('CONTACT.ALERTS.WARNING_TITLE'),
-        this.translate.instant('CONTACT.ALERTS.WARNING_TEXT'),
-        'warning'
-      );
+      Swal.fire({
+        icon: 'warning',
+        title: this.translate.instant('CONTACT.ALERTS.WARNING_TITLE'),
+        text: this.translate.instant('CONTACT.ALERTS.WARNING_TEXT'),
+        ...this.swalTheme,
+      });
       return;
     }
     const res = await fetch('https://formspree.io/f/mzbqzaad', {
@@ -92,11 +144,12 @@ export class ContactComponent implements OnInit {
     });
     if (res.ok) {
       this.contactForm.reset();
-      Swal.fire(
-        this.translate.instant('CONTACT.ALERTS.SUCCESS_TITLE'),
-        this.translate.instant('CONTACT.ALERTS.SUCCESS_TEXT'),
-        'success'
-      );
+      Swal.fire({
+        title: this.translate.instant('CONTACT.ALERTS.SUCCESS_TITLE'),
+        text: this.translate.instant('CONTACT.ALERTS.SUCCESS_TEXT'),
+        icon: 'success',
+        ...this.swalTheme,
+      });
     }
   }
 }
