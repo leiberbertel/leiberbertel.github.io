@@ -72,6 +72,16 @@
         "3": "Implementar aplicaciones de almacenamiento de datos y mantener su eficacia."
       }
     },
+    "MOBILE": {
+      "TITLE": "Desarrollador <br />Móvil",
+      "BULLETS": {
+        "0": "Diseñar e implementar arquitecturas escalables utilizando Clean Architecture y patrones BLoC/MVVM para Flutter y Kotlin.",
+        "1": "Monitorear la estabilidad y el rendimiento de la aplicación mediante Firebase Crashlytics para resolver proactivamente errores en tiempo de ejecución y ANRs.",
+        "2": "Orquestar el proceso completo de despliegue en Apple App Store y Google Play Store, asegurando el cumplimiento de las directrices de cada plataforma.",
+        "3": "Desarrollar una estrategia integral de pruebas que cubra pruebas Unitarias, de Integración y de Usabilidad para garantizar una UI/UX de alta calidad.",
+        "4": "Integrar servicios en la nube de Firebase para mejorar la sincronización de datos en tiempo real y las funcionalidades de interacción con el usuario."
+      }
+    },
     "DATA": {
       "TITLE": "Analista <br />de datos",
       "BULLETS": {

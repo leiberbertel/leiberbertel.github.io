@@ -550,11 +550,15 @@ img {
 }
 
 .skills__flutter {
-  width: 66%;
+  width: 70%;
 }
 
 .skills__kotlin {
   width: 65%;
+}
+
+.skills__firebaseCrashlytics {
+  width: 70%;
 }
 
 .skills__jetpackcompose {
