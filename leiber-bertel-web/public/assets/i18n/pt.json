@@ -156,6 +156,12 @@
     "TITLE": "Projetos",
     "SUBTITLE": "Ao longo da minha trajetória como desenvolvedor de software, tive a oportunidade de trabalhar em projetos incríveis e desafiadores. <br />Estes são alguns que quero compartilhar",
     "CTA": "Github",
+    "EMPTY": "Nenhum projeto para exibir no momento.",
+    "NAV": {
+      "PREV": "Mostrar projeto anterior",
+      "NEXT": "Mostrar proximo projeto",
+      "GOTO": "Ir para o projeto {{index}}"
+    },
     "PROJECTS": {
       "0": {
         "DESCRIPTION": "Aplicativo de lista de tarefas com cadastro, login, busca e CRUD completo em Django.",

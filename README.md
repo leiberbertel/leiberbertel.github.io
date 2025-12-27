@@ -22,7 +22,7 @@ Portafolio personal migrado de HTML/CSS/JS plano a Angular 19 con componentes st
 - Navegacion responsive con menu hamburguesa, sombreado al hacer scroll y boton de volver arriba.
 - Selector de idioma (es/en/pt) y tema claro/oscuro persistentes en localStorage, gestionados por `src/app/core/services/i18n.service.ts`.
 - Secciones de contenido: hero, about, skills (acordeon), qualification (linea de tiempo), services, testimonials, portfolio y contacto.
-- Carrusel de proyectos con Swiper 12 en `src/app/features/portfolio/portfolio.component.ts` (flechas, paginacion y loop).
+- Carrusel de proyectos nativo en `src/app/features/portfolio/portfolio.component.ts` (flechas, paginacion y loop).
 - Formulario de contacto reactivo con validaciones, envio via Formspree (`https://formspree.io/f/mzbqzaad`) y alertas con SweetAlert2.
 - Recursos estaticos en `public/assets` (imagenes, PDF del CV y traducciones en `public/assets/i18n/*.json`).
 
