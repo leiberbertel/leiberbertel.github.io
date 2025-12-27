@@ -176,26 +176,23 @@ export class AppComponent implements OnInit {
       ],
     },
     {
-      id: 'data',
-      title: 'SKILLS.CATEGORIES.DATA.TITLE',
-      subtitle: 'SKILLS.CATEGORIES.DATA.SUBTITLE',
-      icon: 'uil uil-chart-line',
-      skills: [
-        { name: 'Excel', level: '70%', barClass: 'skills__excel' },
-        { name: 'Power Bi', level: '65%', barClass: 'skills__powerbi' },
-        { name: 'SQL', level: '85%', barClass: 'skills__sql' },
-        { name: 'Big Data', level: '60%', barClass: 'skills__bigdata' },
-      ],
-    },
-    {
       id: 'mobile',
       title: 'SKILLS.CATEGORIES.MOBILE.TITLE',
       subtitle: 'SKILLS.CATEGORIES.MOBILE.SUBTITLE',
       icon: 'uil uil-mobile-android',
       skills: [
-        { name: 'Flutter', level: '66%', barClass: 'skills__flutter' },
+        { name: 'Flutter', level: '70%', barClass: 'skills__flutter' },
         { name: 'Kotlin', level: '65%', barClass: 'skills__kotlin' },
-        { name: 'Jetpack Compose', level: '65%', barClass: 'skills__jetpackcompose' },
+        {
+          name: 'Jetpack Compose',
+          level: '65%',
+          barClass: 'skills__jetpackcompose',
+        },
+        {
+          name: 'Firebase Crashlytics',
+          level: '70%',
+          barClass: 'skills__firebaseCrashlytics',
+        },
       ],
     },
   ];
@@ -274,13 +271,14 @@ export class AppComponent implements OnInit {
       ],
     },
     {
-      icon: 'uil uil-chart-growth',
-      title: 'SERVICES.DATA.TITLE',
+      icon: 'uil uil-mobile-android',
+      title: 'SERVICES.MOBILE.TITLE',
       bullets: [
-        'SERVICES.DATA.BULLETS.0',
-        'SERVICES.DATA.BULLETS.1',
-        'SERVICES.DATA.BULLETS.2',
-        'SERVICES.DATA.BULLETS.3',
+        'SERVICES.MOBILE.BULLETS.0',
+        'SERVICES.MOBILE.BULLETS.1',
+        'SERVICES.MOBILE.BULLETS.2',
+        'SERVICES.MOBILE.BULLETS.3',
+        'SERVICES.MOBILE.BULLETS.4',
       ],
     },
   ];
