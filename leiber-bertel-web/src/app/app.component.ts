@@ -111,7 +111,7 @@ export class AppComponent implements OnInit {
     ctaHref: '#contact',
     scrollLabel: 'HERO.SCROLL',
     scrollHref: '#about',
-    imageSrc: 'assets/img/perfil.png',
+    imageSrc: 'https://plhmjzol7fhqdza8.public.blob.vercel-storage.com/img/perfil.png',
     imageAlt: 'HERO.IMAGE_ALT',
     social: [
       {
@@ -133,14 +133,14 @@ export class AppComponent implements OnInit {
   };
 
   aboutData: AboutData = {
-    image: 'assets/img/about.jpeg',
+    image: 'https://plhmjzol7fhqdza8.public.blob.vercel-storage.com/img/about.jpeg',
     description: 'ABOUT.DESCRIPTION',
     stats: [
       { value: '02+', label: 'ABOUT.STATS.EXPERIENCE' },
       { value: '25+', label: 'ABOUT.STATS.PROJECTS' },
       { value: '01+', label: 'ABOUT.STATS.COMPANIES' },
     ],
-    cvLink: 'assets/pdf/leiber_bertel_curriculum.pdf',
+    cvLink: 'https://plhmjzol7fhqdza8.public.blob.vercel-storage.com/pdf/leiber_bertel_curriculum.pdf',
     cvLabel: 'ABOUT.CV',
   };
 
@@ -305,7 +305,7 @@ export class AppComponent implements OnInit {
     {
       title: 'To Do List',
       description: 'PORTFOLIO.PROJECTS.0.DESCRIPTION',
-      image: 'assets/img/portfolio1.png',
+      image: 'https://plhmjzol7fhqdza8.public.blob.vercel-storage.com/img/portfolio1.png',
       alt: 'PORTFOLIO.PROJECTS.0.ALT',
       link: 'https://github.com/leiberbertel/to_do_App',
       cta: 'PORTFOLIO.CTA',
@@ -313,7 +313,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Tablero Financiero Interactivo',
       description: 'PORTFOLIO.PROJECTS.1.DESCRIPTION',
-      image: 'assets/img/portfolio2.png',
+      image: 'https://plhmjzol7fhqdza8.public.blob.vercel-storage.com/img/portfolio2.png',
       alt: 'PORTFOLIO.PROJECTS.1.ALT',
       link: 'https://github.com/leiberbertel/financial_dashboard_dash',
       cta: 'PORTFOLIO.CTA',
@@ -321,7 +321,7 @@ export class AppComponent implements OnInit {
     {
       title: 'The Django Blogger',
       description: 'PORTFOLIO.PROJECTS.2.DESCRIPTION',
-      image: 'assets/img/portfolio3.png',
+      image: 'https://plhmjzol7fhqdza8.public.blob.vercel-storage.com/img/portfolio3.png',
       alt: 'PORTFOLIO.PROJECTS.2.ALT',
       link: 'https://github.com/leiberbertel/dj-blogger',
       cta: 'PORTFOLIO.CTA',
