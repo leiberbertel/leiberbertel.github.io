@@ -71,6 +71,7 @@ export class AppComponent implements OnInit {
     { code: 'es', label: 'Español' },
     { code: 'en', label: 'English' },
     { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
   ];
 
   navLinks: NavLink[] = [
