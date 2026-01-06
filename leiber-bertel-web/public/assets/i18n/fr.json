@@ -1,0 +1,214 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "ABOUT": "À propos de moi",
+    "SKILLS": "Compétences",
+    "SERVICES": "Services",
+    "PORTFOLIO": "Portfolio",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "NAME": "Salut ! Je suis Leiber",
+    "TITLE": "Développeur logiciel",
+    "SUBTITLE": "Développeur logiciel",
+    "DESCRIPTION": "Je suis un développeur backend avec des connaissances en frontend. Autodidacte, j’aime apprendre de nouvelles choses chaque jour et créer des produits web.",
+    "CTA": "Contactez-moi",
+    "SCROLL": "Faire défiler vers le bas",
+    "IMAGE_ALT": "Photo de profil de Leiber"
+  },
+  "ABOUT": {
+    "TITLE": "Apprenez à me connaître un peu...",
+    "SUBTITLE": "Devise de vie",
+    "TAGLINE": "Ne jamais arrêter d’apprendre",
+    "DESCRIPTION": "Développeur logiciel avec de l’expérience dans la création d’applications robustes et évolutives. Bien que mon axe principal soit le développement backend, j’ai également des connaissances en technologies frontend, ce qui me permet de contribuer efficacement sur toute la stack.",
+    "STATS": {
+      "EXPERIENCE": "Années <br />d’expérience",
+      "PROJECTS": "Projets <br />réalisés",
+      "COMPANIES": "Entreprises <br />où j’ai travaillé"
+    },
+    "CV": "Télécharger le CV"
+  },
+  "SKILLS": {
+    "TITLE": "Compétences",
+    "SUBTITLE": "Mon niveau technique",
+    "CATEGORIES": {
+      "FRONTEND": {
+        "TITLE": "Développeur Frontend",
+        "SUBTITLE": "Plus de 2 ans"
+      },
+      "BACKEND": {
+        "TITLE": "Développeur Backend",
+        "SUBTITLE": "Plus de 2 ans"
+      },
+      "DATA": {
+        "TITLE": "Analyste de données",
+        "SUBTITLE": "Plus de 11 mois"
+      },
+      "MOBILE": {
+        "TITLE": "Développeur Mobile",
+        "SUBTITLE": "Plus de 5 mois"
+      }
+    }
+  },
+  "SERVICES": {
+    "TITLE": "Mes services",
+    "SUBTITLE": "Mes différentes facettes",
+    "VIEW_MORE": "Voir plus",
+    "FRONTEND": {
+      "TITLE": "Développeur <br />frontend",
+      "BULLETS": {
+        "0": "Superviser la structure et le design des pages web et les rendre aussi simples que possible.",
+        "1": "Développer des applications orientées utilisateur et en superviser l’efficacité.",
+        "2": "Comprendre les besoins de l’entreprise et garantir une efficacité maximale des pages web.",
+        "3": "Modifier le design et le contenu des pages existantes au bénéfice des utilisateurs et des clients."
+      }
+    },
+    "BACKEND": {
+      "TITLE": "Développeur <br />backend",
+      "BULLETS": {
+        "0": "Travailler avec la direction afin de garantir une expérience utilisateur de haut niveau.",
+        "1": "Intégrer des éléments de sécurité pensés pour l’avenir et en assurer le bon fonctionnement continu.",
+        "2": "Optimiser les applications pour offrir plus de rapidité et de confort.",
+        "3": "Implémenter des applications de stockage de données et maintenir leur efficacité."
+      }
+    },
+    "MOBILE": {
+      "TITLE": "Développeur <br />Mobile",
+      "BULLETS": {
+        "0": "Concevoir et implémenter des architectures évolutives en utilisant Clean Architecture et les patterns BLoC/MVVM pour Flutter et Kotlin.",
+        "1": "Surveiller la stabilité et les performances de l’application via Firebase Crashlytics afin de résoudre de manière proactive les erreurs d’exécution et les ANR.",
+        "2": "Orchestrer l’ensemble du processus de déploiement sur l’Apple App Store et le Google Play Store, en assurant le respect des directives de chaque plateforme.",
+        "3": "Développer une stratégie de tests complète couvrant les tests unitaires, d’intégration et d’utilisabilité afin de garantir une UI/UX de haute qualité.",
+        "4": "Intégrer les services cloud de Firebase pour améliorer la synchronisation des données en temps réel et les fonctionnalités d’interaction utilisateur."
+      }
+    },
+    "DATA": {
+      "TITLE": "Analyste <br />de données",
+      "BULLETS": {
+        "0": "Extraire et traiter tous types de données.",
+        "1": "Analyser l’ensemble des données à l’aide des outils appropriés.",
+        "2": "Élaborer des rapports à partir des données pertinentes.",
+        "3": "Communiquer à la direction les résultats obtenus."
+      }
+    }
+  },
+  "TESTIMONIALS": {
+    "TITLE": "Témoignages",
+    "SUBTITLE": "Ce que l’on dit de mon travail",
+    "MESSAGES": {
+      "0": {
+        "ROLE": "Product Manager",
+        "TEXT": "Son approche backend nous a permis de monter en charge sans friction et avec des livraisons rapides."
+      },
+      "1": {
+        "ROLE": "Tech Lead",
+        "TEXT": "Excellent équilibre entre qualité du code et rapidité ; il propose toujours des améliorations utiles."
+      },
+      "2": {
+        "ROLE": "Data Analyst",
+        "TEXT": "Son soutien sur les visualisations et les dashboards nous a aidés à communiquer des insights clés."
+      }
+    }
+  },
+  "QUALIFICATION": {
+    "TITLE": "Parcours",
+    "SUBTITLE": "Mon parcours personnel",
+    "TABS": {
+      "EDUCATION": "Formation",
+      "WORK": "Expérience"
+    },
+    "EDUCATION": {
+      "BACHELOR": {
+        "TITLE": "Baccalauréat scientifique",
+        "SUBTITLE": "Colombie - Collège Álvaro Araujo Noguera",
+        "CALENDAR": "2018 - 2020"
+      },
+      "BACKEND": {
+        "TITLE": "Développeur Backend avec Python et Django",
+        "SUBTITLE": "Colombie - Platzi",
+        "CALENDAR": "2021 - 2023"
+      },
+      "FULLSTACK": {
+        "TITLE": "Développement Full-Stack avec Java + Spring",
+        "SUBTITLE": "Colombie - Oracle Next Education",
+        "CALENDAR": "2022 - 2023"
+      },
+      "SOFTWARE": {
+        "TITLE": "Technicien en programmation logicielle",
+        "SUBTITLE": "Colombie - SENA",
+        "CALENDAR": "2023 - 2024"
+      }
+    },
+    "WORK": {
+      "SOFTWARE": {
+        "TITLE": "Développeur logiciel (Mobile et Web)",
+        "SUBTITLE": "Quipux - Medellín, Antioquia",
+        "CALENDAR": "2023 - Aujourd’hui"
+      },
+      "FULLSTACK": {
+        "TITLE": "Développeur full-stack",
+        "SUBTITLE": "Indépendant - Medellín, Antioquia",
+        "CALENDAR": "2022 - 2023"
+      },
+      "LOGISTICS": {
+        "TITLE": "Opérateur logistique",
+        "SUBTITLE": "Utah Textil - Colombie, Antioquia",
+        "CALENDAR": "2021 - 2022"
+      },
+      "ADMIN": {
+        "TITLE": "Agent administratif",
+        "SUBTITLE": "Sistervarly - Colombie, César",
+        "CALENDAR": "2019 - 2021"
+      }
+    }
+  },
+  "PORTFOLIO": {
+    "TITLE": "Projets",
+    "SUBTITLE": "Tout au long de mon parcours en tant que développeur logiciel, j’ai eu l’opportunité de travailler sur des projets incroyables et stimulants. <br />Voici quelques projets que j’aimerais partager",
+    "CTA": "Github",
+    "EMPTY": "Il n’y a pas encore de projets à afficher.",
+    "NAV": {
+      "PREV": "Afficher le projet précédent",
+      "NEXT": "Afficher le projet suivant",
+      "GOTO": "Aller au projet {{index}}"
+    },
+    "PROJECTS": {
+      "0": {
+        "DESCRIPTION": "Application de gestion de tâches avec inscription utilisateur, connexion, recherche et CRUD complet, développée avec Django.",
+        "ALT": "Application de tâches en Django"
+      },
+      "1": {
+        "DESCRIPTION": "Tableau de bord financier configurable avec Plotly Dash en Python pour charger, filtrer et visualiser des données.",
+        "ALT": "Tableau de bord financier interactif"
+      },
+      "2": {
+        "DESCRIPTION": "Blog responsive avec création d’articles, support des images et tests automatisés. Construit avec Django et Bootstrap.",
+        "ALT": "Blog Django responsive"
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Discutons !",
+    "SUBTITLE": "Ma boîte de réception est toujours ouverte. <br />Si vous avez des questions sur mes services ou si vous souhaitez simplement me dire bonjour,<br />n’hésitez pas à me contacter.",
+    "LOCATION": {
+      "TITLE": "Localisation",
+      "SUBTITLE": "Colombie - Medellín"
+    },
+    "FORM": {
+      "NAME": "Nom",
+      "EMAIL": "E-mail",
+      "REASON": "Projet",
+      "MESSAGE": "Message",
+      "SUBMIT": "Envoyer le message"
+    },
+    "ALERTS": {
+      "WARNING_TITLE": "Avertissement",
+      "WARNING_TEXT": "Veuillez compléter tous les champs.",
+      "SUCCESS_TITLE": "Je vous répondrai très bientôt !",
+      "SUCCESS_TEXT": "Merci de l’intérêt que vous me portez."
+    }
+  },
+  "FOOTER": {
+    "COPY": "Réalisé avec⚡"
+  }
+}
