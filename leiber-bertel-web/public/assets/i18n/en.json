@@ -9,9 +9,9 @@
   },
   "HERO": {
     "NAME": "Hi! I'm Leiber",
-    "TITLE": "Software Developer",
-    "SUBTITLE": "Software Developer",
-    "DESCRIPTION": "I'm a backend developer with frontend knowledge. I'm self-taught, love learning new things every day, and building web products.",
+    "TITLE": "Full-Stack and Mobile Developer",
+    "SUBTITLE": "Full-Stack and Mobile Developer",
+    "DESCRIPTION": "Backend, Frontend, and Android/iOS Apps. <br/>Clean architecture. <br/>Product focus.",
     "CTA": "Contact me",
     "SCROLL": "Scroll down",
     "IMAGE_ALT": "Profile photo of Leiber"
@@ -20,7 +20,7 @@
     "TITLE": "Get to know me...",
     "SUBTITLE": "Life motto",
     "TAGLINE": "Never stop learning",
-    "DESCRIPTION": "Software developer with experience creating robust and scalable applications. While my focus is backend development, I also know frontend technologies, which lets me contribute effectively across the stack.",
+    "DESCRIPTION": "Full-stack and mobile software developer with experience in creating robust and scalable applications. I work on backend, frontend, and Android and iOS applications, with a focus on architecture, quality, and product.",
     "STATS": {
       "EXPERIENCE": "Years <br />of experience",
       "PROJECTS": "Projects <br />completed",
@@ -46,7 +46,7 @@
       },
       "MOBILE": {
         "TITLE": "Mobile Developer ",
-        "SUBTITLE": "More than 5 months"
+        "SUBTITLE": "More than 8 months"
       }
     }
   },
@@ -55,21 +55,21 @@
     "SUBTITLE": "My different facets",
     "VIEW_MORE": "See more",
     "FRONTEND": {
-      "TITLE": "Frontend <br />developer",
+      "TITLE": "Frontend <br />Developer",
       "BULLETS": {
-        "0": "Oversee web page structure and design, making them as simple as possible.",
-        "1": "Develop user-facing applications and monitor their effectiveness.",
-        "2": "Understand business needs and ensure maximum efficiency of web pages.",
-        "3": "Adjust the design and content of existing pages to benefit users and clients."
+        "0": "I design and develop modern, clear, and user experience-centered interfaces.",
+        "1": "I build user-oriented web applications, optimizing usability, performance, and accessibility.",
+        "2": "I translate business needs into functional and efficient visual solutions.",
+        "3": "I improve and maintain existing interfaces to provide a better experience for users and clients."
       }
     },
     "BACKEND": {
-      "TITLE": "Backend <br />developer",
+      "TITLE": "Backend <br />Developer",
       "BULLETS": {
-        "0": "Work with leadership to keep the user experience at a high level.",
-        "1": "Add future-proof security elements and oversee their ongoing functionality.",
-        "2": "Optimize applications for greater speed and usability.",
-        "3": "Implement data storage applications and maintain their effectiveness."
+        "0": "I design and develop business logic and architecture that supports scalable applications.",
+        "1": "I implement secure and maintainable solutions, prepared for long-term growth.",
+        "2": "I optimize services and APIs to improve performance, stability, and efficiency.",
+        "3": "I manage data storage and processing, ensuring integrity and availability."
       }
     },
     "MOBILE": {

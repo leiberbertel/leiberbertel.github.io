@@ -9,9 +9,9 @@
   },
   "HERO": {
     "NAME": "¡Hola! Soy Leiber",
-    "TITLE": "Desarrollador de Software",
-    "SUBTITLE": "Desarrollador de Software",
-    "DESCRIPTION": "Soy un desarrollador backend con conocimientos de frontend. Soy autodidacta, me gusta aprender cosas nuevas cada día y crear productos web.",
+    "TITLE": "Desarrollador Full-Stack & Mobile",
+    "SUBTITLE": "Desarrollador Full-Stack & Mobile",
+    "DESCRIPTION": "Backend, Frontend y Apps Android/iOS. <br/>Arquitectura limpia.<br /> Enfoque a producto",
     "CTA": "Contáctame",
     "SCROLL": "Desplazarse hacia abajo",
     "IMAGE_ALT": "Foto de perfil de Leiber"
@@ -20,7 +20,7 @@
     "TITLE": "Conóceme un poco...",
     "SUBTITLE": "Lema de vida",
     "TAGLINE": "Nunca parar de aprender",
-    "DESCRIPTION": "Desarrollador de software con experiencia en la creación de aplicaciones robustas y escalables. Aunque mi enfoque principal es el desarrollo backend, también tengo conocimientos en tecnologías frontend, lo que me permite contribuir eficazmente a través de la pila.",
+    "DESCRIPTION": "Desarrollador de software full-stack y mobile con experiencia en la creación de aplicaciones robustas y escalables. Trabajo en backend, frontend y aplicaciones Android e iOS, con enfoque en arquitectura, calidad y producto.",
     "STATS": {
       "EXPERIENCE": "Años <br />de experiencia",
       "PROJECTS": "Proyectos <br />completados",
@@ -46,7 +46,7 @@
       },
       "MOBILE": {
         "TITLE": "Desarrollador Móvil",
-        "SUBTITLE": "Más de 5 meses"
+        "SUBTITLE": "Más de 8 meses"
       }
     }
   },
@@ -57,19 +57,19 @@
     "FRONTEND": {
       "TITLE": "Desarrollador <br />frontend",
       "BULLETS": {
-        "0": "Supervisar la estructura y el diseño de páginas web y hacerlas lo más sencillas posible.",
-        "1": "Desarrollar aplicaciones orientadas al usuario y supervisar su eficacia.",
-        "2": "Comprender las necesidades de la empresa y garantizar la máxima eficacia de las páginas web.",
-        "3": "Cambiar el diseño y el contenido de las páginas existentes en beneficio de usuarios y clientes."
+        "0": "Diseño y desarrollo interfaces modernas, claras y centradas en la experiencia de usuario.",
+        "1": "Construyo aplicaciones web orientadas al usuario, optimizando usabilidad, rendimiento y accesibilidad.",
+        "2": "Traduzco necesidades de negocio en soluciones visuales funcionales y eficientes.",
+        "3": "Mejoro y mantengo interfaces existentes para ofrecer una mejor experiencia a usuarios y clientes."
       }
     },
     "BACKEND": {
       "TITLE": "Desarrollador <br />backend",
       "BULLETS": {
-        "0": "Trabajar con la dirección para garantizar que la experiencia de usuario siga siendo de alto nivel.",
-        "1": "Incorporar elementos de seguridad preparados para el futuro y supervisar su funcionalidad permanente.",
-        "2": "Optimizar aplicaciones para ofrecer mayor rapidez y comodidad.",
-        "3": "Implementar aplicaciones de almacenamiento de datos y mantener su eficacia."
+        "0": "Diseño y desarrollo la lógica del negocio y la arquitectura que soporta aplicaciones escalables.",
+        "1": "Implemento soluciones seguras y mantenibles, preparadas para crecer a largo plazo.",
+        "2": "Optimizo servicios y APIs para mejorar rendimiento, estabilidad y eficiencia.",
+        "3": "Gestiono el almacenamiento y procesamiento de datos garantizando integridad y disponibilidad."
       }
     },
     "MOBILE": {
