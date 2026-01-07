@@ -34,4 +34,4 @@ Portafolio personal migrado de HTML/CSS/JS plano a Angular 19 con componentes st
 
 ## Notas de despliegue
 - La salida de produccion queda en `leiber-bertel-web/dist/` tras ejecutar `npm run build`.
-- Si agregas o cambias textos, actualiza las tres traducciones en `public/assets/i18n/`.
+- Si agregas o cambias textos, actualiza las cuatro traducciones en `public/assets/i18n/`.
