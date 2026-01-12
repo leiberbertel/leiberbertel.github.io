@@ -99,3 +99,7 @@ body.dark-theme .nav__lang-menu {
 .lang-btn:active i {
   color: var(--first-color);
 }
+
+.lang-options:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
