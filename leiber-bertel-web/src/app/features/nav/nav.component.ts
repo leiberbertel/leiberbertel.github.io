@@ -61,7 +61,7 @@ export interface NavLink {
               <i class="uil uil-globe"></i>
             </button>
             <ul *ngIf="langMenuOpen" class="nav__lang-menu animate">
-              <li *ngFor="let lang of languages">
+              <li *ngFor="let lang of languages" class="lang-options">
                 <button
                   type="button"
                   (click)="selectLanguage(lang.code)"

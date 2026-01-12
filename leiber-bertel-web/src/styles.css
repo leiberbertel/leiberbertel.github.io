@@ -201,6 +201,24 @@ img {
     border-radius: 1.5rem 1.5rem 0 0;
     transition: 0.3s;
   }
+
+  .portfolio__viewport {
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+
+  .portfolio__track {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio__slide {
+    min-width: 100%;
+  }
+
+  .portfolio__controls .portfolio__nav {
+    display: none;
+  }
 }
 
 .nav__list {
@@ -1341,7 +1359,7 @@ img {
   background: var(--container-color);
   color: var(--text-color);
   border-radius: 1rem;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   padding: 1.5rem 1.75rem;
 }
 
@@ -1365,7 +1383,7 @@ img {
   border: none;
   border-radius: 0.5rem;
   padding: 0.9rem 1.2rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .swal-btn.swal2-styled:focus {

@@ -27,7 +27,12 @@ export interface PortfolioProject {
         class="portfolio__slider container"
         *ngIf="projects.length; else emptyState"
       >
-        <div class="portfolio__viewport">
+        <div
+          class="portfolio__viewport"
+          (touchstart)="onTouchStart($event)"
+          (touchmove)="onTouchMove($event)"
+          (touchend)="onTouchEnd($event)"
+        >
           <div class="portfolio__track" [style.transform]="trackTransform">
             <article
               class="portfolio__slide"
@@ -104,6 +109,9 @@ export class PortfolioComponent {
   @Input() projects: PortfolioProject[] = [];
 
   currentIndex = 0;
+  private startX = 0;
+  private currentX = 0;
+  private readonly swipeThreshold = 50;
 
   get trackTransform(): string {
     return `translateX(-${this.currentIndex * 100}%)`;
@@ -123,5 +131,30 @@ export class PortfolioComponent {
   goTo(index: number) {
     if (!this.projects?.length) return;
     this.currentIndex = index;
+  }
+
+  onTouchStart(event: TouchEvent) {
+    event.stopPropagation();
+    this.startX = event.touches[0].clientX;
+    this.currentX = this.startX;
+  }
+
+  onTouchMove(event: TouchEvent) {
+    event.stopPropagation();
+    this.currentX = event.touches[0].clientX;
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    event.stopPropagation();
+
+    const deltaX = this.currentX - this.startX;
+
+    if (Math.abs(deltaX) < this.swipeThreshold) return;
+
+    if (deltaX < 0) {
+      this.next();
+    } else {
+      this.prev();
+    }
   }
 }
