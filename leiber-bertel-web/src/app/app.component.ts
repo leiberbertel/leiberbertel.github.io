@@ -278,8 +278,6 @@ export class AppComponent implements OnInit {
         'SERVICES.MOBILE.BULLETS.0',
         'SERVICES.MOBILE.BULLETS.1',
         'SERVICES.MOBILE.BULLETS.2',
-        'SERVICES.MOBILE.BULLETS.3',
-        'SERVICES.MOBILE.BULLETS.4',
       ],
     },
   ];
